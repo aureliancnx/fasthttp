@@ -322,6 +322,8 @@ type FS struct {
 
 	once sync.Once
 	h    RequestHandler
+
+	internalFs *fsHandler
 }
 
 // FSCompressedFileSuffix is the suffix FS adds to the original file names
@@ -484,6 +486,7 @@ func (fs *FS) initRequestHandler() {
 		}
 	}()
 
+	fs.internalFs = h
 	fs.h = h.handleRequest
 }
 
