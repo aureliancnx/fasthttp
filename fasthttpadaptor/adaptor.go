@@ -6,7 +6,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/valyala/fasthttp"
+	"github.com/aureliancnx/fasthttp"
 )
 
 // NewFastHTTPHandlerFunc wraps net/http handler func to fasthttp
